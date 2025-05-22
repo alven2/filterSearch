@@ -1,0 +1,43 @@
+1) se rescata el input del search
+2) se rescata las cosas que se puedan
+buscar como ul li, h1 etc.
+
+3) se agrega un escuchador de eventos al input, poniendole input y una funcion.
+
+4) dentro de esta funcion se crea una constante filtradora de minusculas con this.value.toLowerCase().
+
+5) dentro de la misma funcion se crea un recorrido de los elementos rescatados del list con forEach. => dentro de este forEach se crea una constante modificadora de todo los elementos del list rescatados para que sean minusculas para que la hora de buscar sean compatibles.
+
+6) dentro de esta misma misma funcion y dentro del mismo for each, osea siguiendo para abajo, se crea un if else para verificar el constante de la modificadora agregandole .includes(*el constante fltro*) para luego ponerle classlist y remover la clase creada en css de display hidden, ya en el else se pone add y la misma class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const $search = document.querySelector('#search');
+const $list = document.querySelectorAll('#ul li');
+
+$search.addEventListener('input', function() {
+    const filtro = this.value.toLowerCase();
+    
+$list.forEach(function(elemento) {
+    const txtMinus = elemento.textContent.toLowerCase();
+    
+    if (txtMinus.includes(filtro)) {
+        elemento.classList.remove('no-coincide')
+    } else {
+        elemento.classList.add('no-coincide')
+    }
+})
+})
