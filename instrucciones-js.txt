@@ -6,7 +6,7 @@ buscar como ul li, h1 etc.
 
 4) dentro de esta funcion se crea una constante filtradora de minusculas con this.value.toLowerCase().
 
-5) dentro de la misma funcion se crea un recorrido de los elementos rescatados del list con forEach. => dentro de este forEach se crea una constante modificadora de todo los elementos del list rescatados para que sean minusculas para que la hora de buscar sean compatibles.
+5) dentro de la misma funcion se crea un recorrido de los elementos rescatados del list con forEach con function(), dentro de este forEach se crea una constante modificadora de todo los elementos del list rescatados para que sean minusculas para que la hora de buscar sean compatibles.
 
 6) dentro de esta misma misma funcion y dentro del mismo for each, osea siguiendo para abajo, se crea un if else para verificar el constante de la modificadora agregandole .includes(*el constante fltro*) para luego ponerle classlist y remover la clase creada en css de display hidden, ya en el else se pone add y la misma class.
 
